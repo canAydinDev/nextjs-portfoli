@@ -1,4 +1,3 @@
-import { distance } from "framer-motion";
 import { useCallback } from "react";
 import { Particles } from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -8,7 +7,9 @@ const ParticlesContainer = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async () => {}, []);
+  const particlesLoaded = useCallback(async (container) => {
+    console.log(container); // Kontrol amaçlı log
+  }, []);
 
   return (
     <Particles
