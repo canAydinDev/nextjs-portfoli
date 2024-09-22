@@ -14,6 +14,7 @@ const Header = () => {
               height={30}
               alt="logo"
               priority={true}
+              className="filter brightness-75 contrast-90"
             />
           </Link>
           <Socials />

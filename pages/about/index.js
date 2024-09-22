@@ -124,22 +124,40 @@ const About = () => {
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 xl:justify-center">
         <div className="flex-1 flex flex-col justify-center mt-10">
-          <h2 className="h2">
+          <motion.h2
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2"
+          >
             Towards<span className="text-accent"> New Horizons </span>at the
-            Intersection of Healthcare and Artificial Intelligence
-          </h2>
-          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:-px-0">
+            Intersection of Healthcare and AI
+          </motion.h2>
+          <motion.p
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:-px-0"
+          >
             I started working as a medical doctor 10 years ago. For the past 3
             years, I have been interested in programming, artificial
             intelligence, and deep learning. I support academic work on AI
             models in healthcare and offer some models for free on my personal
             website.
-          </p>
-          <div>
-            <div>
+          </motion.p>
+          <motion.div
+            variants={fadeIn("right", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+          >
+            <div className="flex flex-1 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={6} duration={5} />
+                  <CountUp start={0} end={3} duration={5} suffix="+" />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]  ">
                   Years of Experience
@@ -147,16 +165,30 @@ const About = () => {
               </div>
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={25} duration={5} suffix="+" />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]  ">
                   Satisfied clients
                 </div>
               </div>
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={10} duration={5} suffix="+" />
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]  ">
+                  Finished projects
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px] xl:justify-center">
+        <motion.div
+          variants={fadeIn("left", 0.4)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex flex-col w-full xl:max-w-[48%] h-[480px] xl:justify-center"
+        >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
@@ -196,7 +228,7 @@ const About = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
